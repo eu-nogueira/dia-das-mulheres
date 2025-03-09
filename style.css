@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(253, 236, 253);
+}
+
+.flor {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    animation: grow 5s forwards;
+}
+
+.petal {
+    position: absolute;
+    width: 50px;
+    margin: auto;
+    height: 100px;
+    background-color: rgb(255, 104, 255);
+    border-radius: 50%;
+    transform-origin: bottom center;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+    animation-iteration-count: infinite;
+}
+
+.petal1 { transform: rotate(0deg); }
+.petal2 { transform: rotate(45deg); }
+.petal3 { transform: rotate(90deg); }
+.petal4 { transform: rotate(135deg); }
+.petal5 { transform: rotate(180deg); }
+.petal6 { transform: rotate(225deg); }
+.petal7 { transform: rotate(270deg); }
+.petal8 { transform: rotate(315deg); }
+
+.center {
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 0.5s;
+}
+
+.stem {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    height: 150px;
+    background-color: green;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 1s;
+}
+
+.leaf {
+    position: absolute;
+    width: 30px;
+    height: 15px;
+    background-color: green;
+    border-radius: 50%;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-delay: 1.5s;
+}
+
+.leaf-left {
+    bottom: 50px;
+    left: -20px;
+    transform: rotate(-45deg);
+}
+
+.leaf-right {
+    bottom: 50px;
+    right: -20px;
+    transform: rotate(45deg);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes grow {
+    to {
+        opacity: 1;
+    }
+}
+
+.text {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    max-width: 500px;
+    color: rgb(190, 78, 255);
+}
+
+.titulo {
+    position: absolute;
+    top: 50px;
+    color: rgb(190, 78, 255);
+}
