@@ -1,9 +1,13 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: rgb(253, 236, 253);
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 .flor {
@@ -16,14 +20,12 @@ body {
 .petal {
     position: absolute;
     width: 50px;
-    margin: auto;
     height: 100px;
     background-color: rgb(255, 104, 255);
     border-radius: 50%;
     transform-origin: bottom center;
     opacity: 0;
-    animation: fadeIn 3s forwards;
-    animation-iteration-count: infinite;
+    animation: fadeIn 3s forwards infinite;
 }
 
 .petal1 { transform: rotate(0deg); }
@@ -84,6 +86,16 @@ body {
     transform: rotate(45deg);
 }
 
+.titulo {
+    color: rgb(190, 78, 255);
+}
+
+.text {
+    max-width: 90%;
+    color: rgb(190, 78, 255);
+    padding: 0 10px;
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -94,18 +106,4 @@ body {
     to {
         opacity: 1;
     }
-}
-
-.text {
-    position: absolute;
-    bottom: 20px;
-    text-align: center;
-    max-width: 500px;
-    color: rgb(190, 78, 255);
-}
-
-.titulo {
-    position: absolute;
-    top: 50px;
-    color: rgb(190, 78, 255);
 }
